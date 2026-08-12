@@ -27,20 +27,20 @@ app = FastAPI(title="API Calidad del Agua")
 
                                                                         # TODO Cambiar por las que ellos usen
 class DatosAgua(BaseModel):
-    var1: float
-    var2: float
-    var3: float
-    var4: float
-    var5: float
+    ph: float
+    turbidez: float
+    oxigeno_disuelto: float
+    conductividad: float
+    temperatura: float
 
-    class Config: # Unicma
+    class Config:
         json_schema_extra = {
             "example": {
-                "var1": 7.2,
-                "var2": 12.5,
-                "var3": 6.8,
-                "var4": 450.0,
-                "var5": 22.0
+                "ph": 7.2,
+                "turbidez": 12.5,
+                "oxigeno_disuelto": 6.8,
+                "conductividad": 450.0,
+                "temperatura": 22.0
             }
         }
 
